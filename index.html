@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Shakers</title>
+    <!--<base href="/" />-->
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/Home.css" />
+    <link rel="stylesheet" type="text/css" href="css/MainLayout.css" />
+    <link rel="stylesheet" type="text/css" href="css/Gallery.css" />
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon- 512.jpg" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon- 192.jpg" />
+</head>
+<body>
+    <div class="loading-screen" id="loading-screen">
+        <img id="loading-image" src="Images/maracascom.png" alt="Loading..." />
+    </div>
+    <div id="app">
+        <!-- Blazor components will be rendered here -->
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        // Set a minimum duration for the loading screen (e.g., 30 seconds)
+        const minimumLoadingDuration = 30000; // 30000 milliseconds = 30 seconds
+
+        let loadingTimeout = setTimeout(function () {
+            document.getElementById('loading-screen').style.display = 'none';
+        }, minimumLoadingDuration);
+
+        window.addEventListener('load', function () {
+            clearTimeout(loadingTimeout);
+            document.getElementById('loading-screen').style.display = 'none';
+        });
+
+        navigator.serviceWorker.register('service-worker.js');
+    </script>
+
+    <!-- Load jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .carousel-item img {
+            height: auto; /* Maintain aspect ratio */
+            width: fit-content;
+            object-fit: cover; /* Cover the entire area */
+        }
+    </style>
+</body>
+</html>

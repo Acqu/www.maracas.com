@@ -1,0 +1,90 @@
+﻿body {
+    font-family: Arial, sans-serif; /* Set a default font for the entire page */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Optional: Set a background color */
+}
+
+.home-page {
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px; /* Ensure the content doesn't get hidden behind the navbar */
+}
+
+h1 {
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.highlight {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #444;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping of features on smaller screens */
+}
+
+.feature {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow features to grow equally */
+    min-width: 250px; /* Set a minimum width for better responsiveness */
+    margin: 10px; /* Add margin for spacing */
+}
+
+.footer {
+    margin-top: 20px; /* Add some space above the footer */
+    padding: 10px 0; /* Add padding for better appearance */
+    background-color: darkorange; /* Set the footer background color */
+    color: white; /* Set the text color to white */
+    width: 100%; /* Ensure the footer takes the full width */
+    position: relative; /* Ensure it stays in place */
+    clear: both; /* Clear any floated elements above */
+}
+
+.carousel-caption {
+    background-color: darkorange; /* Semi-transparent background */
+    color: white;
+}
+
+.carousel-item img {
+    height: auto; /* Maintain the aspect ratio */
+    width: 100%; /* Make the image take the full width of the carousel item */
+    object-fit: cover; /* Cover the area without stretching */
+    /*max-height: 300px;*/ /* Set a maximum height for the images */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+   .carousel {
+    width: 100vw; /* Set the width to 100% of the viewport width */
+    position: relative; /* Ensure positioning is relative for absolute elements inside */
+    left: 50%; /* Center the carousel */
+    right: 50%; /* Center the carousel */
+    margin-left: -50vw; /* Adjust the left margin to offset the width */
+    margin-right: -50vw; /* Adjust the right margin to offset the width */
+}
+
+.feature img {
+    width: 50%; /* Make the image take the full width of the feature box */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 200px; /* Set a maximum width for the feature images */
+    margin-top: 5px; /* Add some space above the image */
+    border-radius: 15px; /* Optional: Add rounded corners */
+}
